@@ -2,9 +2,10 @@
 
 A simple cloud and DevOps monitoring dashboard built to demonstrate AWS deployment, Linux administration concepts, and basic web development.
 
+The project was created as part of the AWS Weekend Deployment Challenge and deployed using Amazon S3 and Amazon CloudFront.
 ## 🚀 Live Demo
 
-https://d15sptahuiv3de.cloudfront.net/
+[Open DevOps Cloud Monitor](https://d15sptahuiv3de.cloudfront.net/)
 
 ## 📌 Project Overview
 
@@ -13,7 +14,6 @@ DevOps Cloud Monitor is a responsive dashboard created as part of the AWS Weeken
 The project presents cloud infrastructure and DevOps concepts through a simple monitoring-style interface. It includes infrastructure status cards, AWS service information, Linux command demonstrations, and a project showcase.
 
 The application is built as a static web application using HTML, CSS, and JavaScript and is deployed on AWS using Amazon S3 and Amazon CloudFront.
-
 ## ☁️ AWS Architecture
 
 ```text
@@ -31,116 +31,155 @@ The application is built as a static web application using HTML, CSS, and JavaSc
           |           |           |
           v           v           v
       index.html  style.css   script.js
-🛠️ AWS Services Used
-Amazon S3
+```
 
+
+## 🔄 How the Architecture Works
+
+1. A user opens the application using the CloudFront distribution URL.
+2. Amazon CloudFront receives the HTTPS request.
+3. CloudFront uses Origin Access Control (OAC) to securely access the S3 origin.
+4. Amazon S3 provides the requested static website files.
+5. CloudFront delivers the content back to the user over HTTPS.
+
+This architecture separates content storage from content delivery and provides controlled access between CloudFront and the S3 origin.
+
+## 🛠️ AWS Services Used
+
+### Amazon S3
 Amazon S3 is used to store the static website files:
+- `index.html`
+- `style.css`
+- `script.js`
 
-index.html
-style.css
-script.js
-Amazon CloudFront
+### Amazon CloudFront
+Amazon CloudFront is used as the content delivery network (CDN) and HTTPS entry point for the application.
 
-Amazon CloudFront is used as the content delivery network and HTTPS entry point for the application.
+### CloudFront Origin Access Control
+Origin Access Control (OAC) allows CloudFront to securely access objects stored in the S3 bucket without making the S3 objects publicly accessible.
+## 💻 Technologies Used
 
-CloudFront Origin Access Control
+- HTML5 — Structure of the web application
+- CSS3 — Responsive design and styling
+- JavaScript — Dynamic functionality and local time display
+- Git — Version control
+- GitHub — Source code repository
+- Amazon S3 — Static file storage
+- Amazon CloudFront — Content delivery
+- Linux — System administration concepts and command demonstrations
+- Bash — Basic shell scripting
 
-Origin Access Control (OAC) allows CloudFront to securely access objects stored in the S3 bucket without requiring the website files to be publicly accessible.
+## 🐧 Linux Concepts Demonstrated
 
-💻 Technologies Used
-HTML5
-CSS3
-JavaScript
-Git
-GitHub
-Amazon S3
-Amazon CloudFront
-🐧 Linux Concepts Demonstrated
+The project also demonstrates basic Linux system administration and troubleshooting concepts practiced during development.
 
-The dashboard includes examples of common Linux administration and troubleshooting commands:
+- SSH — Remote server access
+- File Management — `ls`, `cat`, `cp`, `mv`, `rm`
+- File Permissions — `chmod`
+- File Ownership — `chown`
+- Process Monitoring — `top`
+- Service Management — `systemctl`
+- System Logs — `journalctl`
+- Network Troubleshooting — `ip`, `ss`, `curl`
+- Disk Usage — `df`, `du`
+- Bash Scripting — Variables, conditions, and basic loops
+- ## 📊 Dashboard Features
 
-systemctl status sshd
-ss -tuln
-df -h
-top
-curl
+- Infrastructure overview dashboard
+- EC2 status demonstration
+- CPU and memory demonstration metrics
+- Network connectivity status concept
+- AWS services overview
+- Linux command demonstrations
+- Live local time display using JavaScript
+- Responsive design for desktop and mobile screens
+- HikeVerse project showcase
+- GitHub project links
+- ## 🚀 Deployment
 
-These commands represent common activities involved in Linux system administration, service management, network inspection, disk usage monitoring, process monitoring, and connectivity testing.
+The application was deployed using Amazon S3 and Amazon CloudFront.
 
-📊 Dashboard Features
-Infrastructure overview
-EC2 monitoring concept
-CPU demonstration metric
-Memory demonstration metric
-Network connectivity status
-AWS services overview
-Linux command demonstrations
-Live local date and time
-Dashboard status interaction
-Responsive web design
+### Deployment Steps
 
-Note: The CPU and memory values displayed in the dashboard are demonstration metrics and are not real-time EC2 monitoring data.
+1. Created an Amazon S3 bucket in the Mumbai AWS Region (`ap-south-1`).
+2. Uploaded the static website files to the S3 bucket.
+3. Created an Amazon CloudFront distribution.
+4. Configured the S3 bucket as the CloudFront origin.
+5. Enabled CloudFront Origin Access Control (OAC).
+6. Configured `index.html` as the default root object.
+7. Tested the application using the CloudFront HTTPS URL.
 
-🌐 Deployment
+### Live Application
 
-The application was deployed using the following process:
+[Open DevOps Cloud Monitor](https://d15sptahuiv3de.cloudfront.net/)
 
-Created an Amazon S3 bucket.
-Uploaded the website files to Amazon S3.
-Configured Amazon CloudFront with the S3 bucket as the origin.
-Enabled CloudFront Origin Access Control.
-Configured index.html as the default root object.
-Used the CloudFront distribution to serve the application over HTTPS.
-Verified the application through the CloudFront distribution domain.
-🔐 Security
+## 🔐 Security
 
-The project uses CloudFront Origin Access Control to provide controlled access between CloudFront and the S3 origin.
+The project follows basic AWS security practices:
 
-The architecture follows:
+- S3 objects are not publicly exposed for direct website access.
+- CloudFront Origin Access Control (OAC) is used to access the S3 origin.
+- HTTPS is provided through Amazon CloudFront.
+- Only the required AWS resources were used for the deployment.
+- No sensitive credentials or AWS access keys are stored in the project repository.
 
-User
-  |
-  v
-CloudFront
-  |
-  | OAC
-  v
-Private S3 Origin
 
-This avoids directly exposing the S3 objects as a public website through the S3 bucket.
 
-📚 What I Learned
+## 📚 What I Learned
 
-Through this project, I gained practical experience deploying a static web application using AWS.
+Building this project helped me understand how a static web application can be deployed on AWS using cloud services.
 
-I learned how to upload website files to Amazon S3, configure Amazon CloudFront with an S3 origin, use CloudFront Origin Access Control, configure the default root object, and troubleshoot an AccessDenied error during deployment.
+Key learning outcomes:
 
-I also practiced Git and GitHub workflows including initializing a repository, creating commits, working with branches, configuring a remote repository, staging files, and pushing code to GitHub.
+- Understanding Amazon S3 static content storage
+- Understanding Amazon CloudFront and CDN concepts
+- Configuring CloudFront with an S3 origin
+- Understanding Origin Access Control (OAC)
+- Working with AWS regions and resources
+- Using Git and GitHub for version control
+- Connecting Linux administration concepts with cloud infrastructure
+- Practicing basic Bash scripting and Linux troubleshooting
+- Understanding the difference between application demonstration metrics and real monitoring data
+- Deploying and testing a real application on AWS
 
-This project helped me understand how cloud services can be combined to deploy and deliver a web application securely.
 
-🔧 Git Workflow Practiced
+## 🔄 Git Workflow
 
-The project was managed using Git and GitHub.
+Git was used to manage the project source code and track changes.
 
-Common commands practiced include:
+Basic workflow used:
 
-git init
+```bash
 git status
-git add
-git commit
-git branch
-git remote -v
-git push
-👨‍💻 Author
-Mayur Khairnar
-AWS Certified Cloud Practitioner
-B.Sc. Computer Science
-Interested in Cloud Operations, Linux Administration, and DevOps
-🎯 Project Goal
+git add .
+git commit -m "Update project files"
+git push origin main
+```
 
-The goal of this project is to build practical cloud and DevOps knowledge through hands-on AWS deployment and Linux administration practice.
+## 🎯 Project Goal
 
-📄 License
+The goal of DevOps Cloud Monitor is to demonstrate practical knowledge of cloud deployment, Linux administration, basic DevOps concepts, and web development through a simple working project.
 
-This project is created for learning, experimentation, and portfolio purposes.
+This project is part of my continuous learning journey toward Cloud Operations, Linux Administration, and DevOps roles.
+
+## 🔮 Future Improvements
+
+The project can be extended with additional DevOps and cloud monitoring capabilities:
+
+* Integrate real-time AWS CloudWatch metrics
+* Add EC2 health and resource monitoring
+* Add CPU, memory, and disk utilization monitoring
+* Implement CloudWatch alarms and notifications using Amazon SNS
+* Add AWS IAM role-based access
+* Add automated deployment using CI/CD
+* Containerize the application using Docker
+* Add infrastructure automation using Terraform
+* Implement centralized logging and monitoring
+## 👨‍💻 Author
+
+**Mayur Khairnar**
+
+B.Sc. Computer Science | AWS Certified Cloud Practitioner | Cloud & DevOps Learner
+
+- GitHub: [Mayur-Builds](https://github.com/Mayur-Builds)
+- LinkedIn: [Mayur Khairnar](https://www.linkedin.com/in/mayur-khairnar-5b27ab3ba/)
