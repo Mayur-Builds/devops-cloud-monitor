@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mayur | DevOps Cloud Monitor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container nav">
+
+            <h1>☁ DevOps Cloud Monitor</h1>
+
+            <nav>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#aws">AWS</a>
+                <a href="#linux">Linux</a>
+                <a href="#project">Project</a>
+                <a href="#about">About</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+
+            <div class="container">
+
+                <p class="tag">CLOUD • DEVOPS • LINUX</p>
+
+                <h2>
+                    Building my journey in
+                    <span>Cloud & DevOps.</span>
+                </h2>
+
+                <p class="hero-text">
+                    Hi, I'm Mayur — a B.Sc. Computer Science graduate and
+                    AWS Certified Cloud Practitioner building practical
+                    skills in Linux administration, AWS cloud infrastructure,
+                    monitoring and DevOps.
+                </p>
+
+                <div>
+                    <a href="#dashboard" class="button">
+                        Explore Dashboard
+                    </a>
+
+                    <a
+                        href="https://github.com/Mayur-Builds"
+                        target="_blank"
+                        class="button secondary">
+                        GitHub
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p class="tag">MONITORING CONCEPTS</p>
+
+                    <h2>Infrastructure Overview</h2>
+                    <p class="live-time">
+    Local Time: <span id="current-time">Loading...</span>
+</p>
+
+                    <p>
+                        A learning dashboard representing common
+                        infrastructure monitoring concepts.
+                    </p>
+
+                </div>
+                <button class="monitor-button" onclick="showStatus()">
+    Check Dashboard Status
+</button>
+
+
+                <div class="cards">
+
+                    <div class="card">
+
+                        <div class="card-icon">🖥️</div>
+
+                        <h3>EC2</h3>
+
+                        <p class="status">
+                            ● Running
+                        </p>
+
+                        <span>
+                            Amazon Linux 2023
+                        </span>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">⚡</div>
+
+                        <h3>CPU</h3>
+
+                        <p class="metric">
+                            24%
+                        </p>
+
+                        <span>
+                            Demonstration metric
+                        </span>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">💾</div>
+
+                        <h3>Memory</h3>
+
+                        <p class="metric">
+                            42%
+                        </p>
+
+                        <span>
+                            Demonstration metric
+                        </span>
+
+                    </div>
+
+
+                    <div class="card">
+
+                        <div class="card-icon">🌐</div>
+
+                        <h3>Network</h3>
+
+                        <p class="status">
+                            ● Online
+                        </p>
+
+                        <span>
+                            Connectivity concept
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AWS -->
+        <section id="aws" class="section alternate">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p class="tag">AWS CLOUD</p>
+
+                    <h2>AWS Services</h2>
+
+                    <p>
+                        AWS services that are relevant to my cloud
+                        learning and deployment experience.
+                    </p>
+
+                </div>
+
+
+                <div class="aws-grid">
+
+                    <div class="service">
+                        <div class="service-number">01</div>
+                        <h3>Amazon EC2</h3>
+                        <p>
+                            Virtual compute instances used for application
+                            hosting and Linux administration practice.
+                        </p>
+                    </div>
+
+
+                    <div class="service">
+                        <div class="service-number">02</div>
+                        <h3>Amazon S3</h3>
+                        <p>
+                            Object storage that can host static website
+                            files and other application assets.
+                        </p>
+                    </div>
+
+
+                    <div class="service">
+                        <div class="service-number">03</div>
+                        <h3>CloudFront</h3>
+                        <p>
+                            AWS content delivery service used to distribute
+                            web content through edge locations.
+                        </p>
+                    </div>
+
+
+                    <div class="service">
+                        <div class="service-number">04</div>
+                        <h3>CloudWatch</h3>
+                        <p>
+                            AWS monitoring service for observing resources,
+                            metrics, logs and operational activity.
+                        </p>
+                    </div>
+
+
+                    <div class="service">
+                        <div class="service-number">05</div>
+                        <h3>IAM</h3>
+                        <p>
+                            AWS identity and access management used to
+                            control permissions for resources.
+                        </p>
+                    </div>
+
+
+                    <div class="service">
+                        <div class="service-number">06</div>
+                        <h3>Route 53</h3>
+                        <p>
+                            AWS DNS service used for domain name resolution
+                            and routing.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LINUX -->
+        <section id="linux" class="section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p class="tag">LINUX ADMINISTRATION</p>
+
+                    <h2>Linux Troubleshooting</h2>
+
+                    <p>
+                        Commands and concepts I use while practicing
+                        Linux system administration.
+                    </p>
+
+                </div>
+
+
+                <div class="terminal">
+
+                    <div class="terminal-header">
+
+                        <span>●</span>
+                        <span>●</span>
+                        <span>●</span>
+
+                        <p>
+                            mayur@amazon-linux
+                        </p>
+
+                    </div>
+
+
+                    <div class="terminal-body">
+
+                        <p>
+                            <span class="prompt">$</span>
+                            systemctl status sshd
+                        </p>
+
+                        <p class="success">
+                            ● sshd.service - OpenSSH server daemon
+                        </p>
+
+
+                        <p>
+                            <span class="prompt">$</span>
+                            ss -tuln
+                        </p>
+
+                        <p class="output">
+                            LISTEN 0 128 0.0.0.0:22
+                        </p>
+
+
+                        <p>
+                            <span class="prompt">$</span>
+                            df -h
+                        </p>
+
+                        <p class="output">
+                            Filesystem&nbsp;&nbsp; Size&nbsp;&nbsp; Used&nbsp;&nbsp; Avail
+                        </p>
+
+
+                        <p>
+                            <span class="prompt">$</span>
+                            top
+                        </p>
+
+                        <p class="success">
+                            System monitoring command executed...
+                        </p>
+
+
+                        <p>
+                            <span class="prompt">$</span>
+                            curl https://google.com
+                        </p>
+
+                        <p class="success">
+                            HTTP connectivity test completed.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJECT -->
+        <section id="project" class="section alternate">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <p class="tag">PROJECT</p>
+
+                    <h2>HikeVerse</h2>
+
+                    <p>
+                        Smart Trek Booking & Management System
+                    </p>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <div>
+
+                        <p class="project-label">
+                            FULL-STACK APPLICATION
+                        </p>
+
+                        <h3>
+                            HikeVerse – Smart Trek Booking
+                            & Management System
+                        </h3>
+
+                        <p>
+                            A web application built with HTML, CSS,
+                            JavaScript, Node.js, Express and MongoDB Atlas.
+                            The project provided practical experience with
+                            application deployment, AWS infrastructure,
+                            networking and monitoring concepts.
+                        </p>
+
+                        <div class="tech-list">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Node.js</span>
+                            <span>Express</span>
+                            <span>MongoDB</span>
+                            <span>AWS</span>
+
+                        </div>
+
+                        <a
+                            href="https://github.com/Mayur-Builds/HikeVerse"
+                            target="_blank"
+                            class="button">
+                            View on GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section id="about" class="section">
+
+            <div class="container">
+
+                <div class="about">
+
+                    <p class="tag">
+                        ABOUT
+                    </p>
+
+                    <h2>
+                        Learning by building.
+                    </h2>
+
+                    <p>
+                        My current focus is developing practical skills
+                        in Linux system administration, AWS cloud
+                        infrastructure and DevOps.
+                    </p>
+
+                    <p>
+                        I practice working with Linux servers, SSH,
+                        permissions, processes, services, system logs,
+                        networking commands, Bash scripting, Git and
+                        Docker fundamentals.
+                    </p>
+
+                    <p>
+                        This dashboard is part of my hands-on journey
+                        toward Cloud Operations and DevOps roles.
+                    </p>
+
+
+                    <div class="links">
+
+                        <a
+                            href="https://github.com/Mayur-Builds"
+                            target="_blank"
+                            class="button">
+                            GitHub
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/mayur-khairnar-5b27ab3ba/"
+                            target="_blank"
+                            class="button secondary">
+                            LinkedIn
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+                <strong>DevOps Cloud Monitor</strong>
+            </p>
+
+            <p>
+                Built with HTML, CSS & JavaScript
+            </p>
+
+            <p>
+                Cloud deployment powered by AWS
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
