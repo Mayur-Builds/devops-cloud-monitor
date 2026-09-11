@@ -9,8 +9,8 @@ A simple cloud and DevOps monitoring dashboard built to demonstrate AWS deployme
 \## 🚀 Live Demo
 
 
-
-https://YOUR-CLOUDFRONT-DOMAIN.cloudfront.net
+[
+https://YOUR-CLOUDFRONT-DOMAIN.cloudfront.net](https://d15sptahuiv3de.cloudfront.net/)
 
 
 
@@ -196,5 +196,5 @@ This project is created for learning and portfolio purposes.
 
 
 
-https://d15sptahuiv3de.cloudfront.net/
+
 
