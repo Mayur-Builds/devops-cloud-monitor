@@ -7,6 +7,19 @@ The project was created as part of the AWS Weekend Deployment Challenge and depl
 
 [Open DevOps Cloud Monitor](https://d15sptahuiv3de.cloudfront.net/)
 
+
+
+## 📸 Project Screenshots
+
+### Dashboard
+![DevOps Cloud Monitor Dashboard](dashboard.png)
+
+### Amazon S3
+![Amazon S3 Deployment](s3.png)
+
+### Amazon CloudFront
+![Amazon CloudFront Distribution](cloudfront.png)
+
 ## 📌 Project Overview
 
 DevOps Cloud Monitor is a responsive dashboard created as part of the AWS Weekend Deployment Challenge.
